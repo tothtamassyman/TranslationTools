@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
-<!--*******************************************************************
-***********************************************************************
-**                            Applications                           **
-***********************************************************************
-********************************************************************-->
+<!-- *************** Device *************** -->
+    <project name="android_device_asus_tf300t" resourceID="device/asus/tf300t/AutoParts/res/values"/>
+    <project name="android_device_bn_acclaim" resourceID="device/bn/acclaim/TFF/res/values"/>
+    <!-- project name="android_device_motorola_xt897" resourceID="device/motorola/xt897/res/values"/ -->
+    <project name="android_device_oppo_common" resourceID="device/oppo/common/configpanel/res/values"/>
+
+<!-- *************** External *************** -->
     <project name="android_external_whispersystems_WhisperPush" resourceID="external/whispersystems/WhisperPush/res/values">
-        <skip-string type="string" name="default_registration_numbers"/>
+        <skip-string type="string-array" name="default_registration_numbers"/>
     </project>
-    <!-- project name="android_external_whispersystems_TextSecure" resourceID="external/whispersystems/TextSecure/res/values"/ -->
+
+<!-- *************** Frameworks *************** -->
     <project name="android_frameworks_base/Core" resourceID="frameworks/base/core/res/res/values">
         <skip-file name="config.xml"/>
+        <skip-file name="customize.xml"/>
         <skip-file name="donottranslate.xml"/>
         <skip-file name="donottranslate-names.xml"/>
         <skip-file name="donottranslate_material.xml"/>
         <skip-string type="string" name="alternate_eri_file"/>
-        <skip-string type="string" name="android_upgrading_fstrim"/>
         <skip-string type="string" name="autofill_address_line_1_label_re"/>
         <skip-string type="string" name="autofill_address_line_1_re"/>
         <skip-string type="string" name="autofill_address_line_2_re"/>
@@ -64,7 +67,6 @@
         <skip-string type="string" name="sans_serif"/>
         <skip-string type="string" name="time_placeholder"/>
     </project>
-    <!-- project name="android_frameworks_base/InputDevices" resourceID="frameworks/base/packages/InputDevices/res/values"/ -->
     <project name="android_frameworks_base/Keyguard"  resourceID="frameworks/base/packages/Keyguard/res/values">
         <skip-file name="donottranslate.xml"/>
         <skip-string type="string" name="widget_default_package_name"/>
@@ -77,14 +79,15 @@
         <skip-string type="string" name="battery_meter_very_low_overlay_symbol"/>
         <skip-string type="string" name="accessibility_casting"/>
     </project>
-    <!-- project name="android_frameworks_base/WallpaperCropper" resourceID="frameworks/base/packages/WallpaperCropper/res/values"/ -->
+
+<!-- *************** Hardware *************** -->
     <project name="android_hardware_qcom_fm/fmapp2" resourceID="hardware/qcom/fm/fmapp2/res/values"/>
     <project name="android_hardware_qcom_fm/FMRecord" resourceID="hardware/qcom/fm/FMRecord/res/values"/>
+
+<!-- *************** Packages *************** -->
     <project name="android_packages_apps_AudioFX" resourceID="packages/apps/AudioFX/res/values"/>
-    <!-- project name="android_packages_apps_BasicSmsReceiver" resourceID="packages/apps/BasicSmsReceiver/res/values"/ -->
     <project name="android_packages_apps_Bluetooth" resourceID="packages/apps/Bluetooth/res/values"/>
     <project name="android_packages_apps_BluetoothExt" resourceID="packages/apps/BluetoothExt/res/values"/>
-    <!-- project name="android_packages_apps_Browser" resourceID="packages/apps/Browser/res/values"/ -->
     <project name="android_packages_apps_Calculator" resourceID="packages/apps/Calculator/res/values">
         <skip-file name="donottranslate_strings.xml"/>
     </project>
@@ -95,23 +98,22 @@
         <skip-string type="string" name="tardis"/>
     </project>
     <project name="android_packages_apps_Camera2" resourceID="packages/apps/Camera2/res/values">
-        <skip-string type="string" name="camera_mode_content_description"/>
-        <skip-string type="string" name="camera_mode_text"/>
-        <skip-string type="string" name="pref_camera_gridlines_entryvalues"/>
+        <skip-string type="string-array" name="camera_mode_content_description"/>
+        <skip-string type="string-array" name="camera_mode_text"/>
+        <skip-string type="string-array" name="pref_camera_countdown_labels"/>
+        <skip-string type="string-array" name="pref_camera_gridlines_entryvalues"/>
         <skip-string type="string" name="pref_camera_hdr_default"/>
         <skip-string type="string" name="pref_camera_hdr_plus_default"/>
-        <skip-string type="string" name="pref_camera_jpeg_quality_entryvalues"/>
-        <skip-string type="string" name="pref_camera_pano_orientation_entryvalues"/>
+        <skip-string type="string-array" name="pref_camera_jpeg_quality_entryvalues"/>
+        <skip-string type="string-array" name="pref_camera_pano_orientation_entryvalues"/>
         <skip-string type="string" name="pref_camera_timer_sound_default"/>
-        <skip-string type="string-array" name="pref_camera_countdown_labels"/>
     </project>
     <project name="android_packages_apps_CellBroadcastReceiver" resourceID="packages/apps/CellBroadcastReceiver/res/values">
         <skip-string type="string" name="alert_reminder_interval_summary"/>
+        <skip-string type="string" name="alert_reminder_interval_values"/>
         <skip-string type="string" name="alert_sound_duration_summary"/>
         <skip-string type="string" name="alert_sound_duration_values"/>
-        <skip-string type="string-array" name="alert_reminder_interval_values"/>
     </project>
-    <!-- project name="android_packages_apps_CertInstaller" resourceID="packages/apps/CertInstaller/res/values"/ -->
     <project name="android_packages_apps_CMAccount" resourceID="packages/apps/CMAccount/res/values"/>
     <project name="android_packages_apps_CMBugReport" resourceID="packages/apps/CMBugReport/res/values">
         <skip-file name="jira_config.xml"/>
@@ -138,12 +140,9 @@
         <skip-string type="string" name="view_full_call_history_font_family"/>
     </project>
     <project name="android_packages_apps_Eleven" resourceID="packages/apps/Eleven/res/values"/>
-    <!-- project name="android_packages_apps_Email" resourceID="packages/apps/Email/res/values">
+    <project name="android_packages_apps_Email" resourceID="packages/apps/Email/res/values">
         <skip-file name="arrays.xml"/>
-    </project -->
-    <!-- project name="android_packages_apps_Exchange" resourceID="packages/apps/Exchange/res/values">
-        <skip-string type="string-array" name="account_settings_mail_window_entries"/>
-    </project -->
+    </project>
     <project name="android_packages_apps_Gallery2" resourceID="packages/apps/Gallery2/res/values">
         <skip-string type="string" name="aspectOriginal_effect"/>
         <skip-string type="string" name="history_original"/>
@@ -160,16 +159,11 @@
         <skip-string type="string-array" name="pref_video_time_lapse_frame_interval_entries"/>
         <skip-string type="string-array" name="pref_video_time_lapse_frame_interval_units"/>
     </project>
-    <!-- project name="android_packages_apps_HTMLViewer" resourceID="packages/apps/HTMLViewer/res/values"/ -->
     <project name="android_packages_apps_InCallUI" resourceID="packages/apps/InCallUI/res/values"/>
-    <!-- project name="android_packages_apps_KeyChain" resourceID="packages/apps/KeyChain/res/values"/ -->
     <project name="android_packages_apps_LockClock" resourceID="packages/apps/LockClock/res/values"/>
     <project name="android_packages_apps_Mms" resourceID="packages/apps/Mms/res/values">
         <skip-file name="customize.xml"/>
     </project>
-    <!-- project name="android_packages_apps_Nfc" resourceID="packages/apps/Nfc/res/values"/ -->
-    <!-- project name="android_packages_apps_OneTimeInitializer" resourceID="packages/apps/OneTimeInitializer/res/values"/ -->
-    <!-- project name="android_packages_apps_PackageInstaller" resourceID="packages/apps/PackageInstaller/res/values"/ -->
     <project name="android_packages_apps_PhoneCommon" resourceID="packages/apps/PhoneCommon/res/values">
         <skip-file name="cm_extra.xml"/>
         <skip-string type="string" name="dialpad_0_letters"/>
@@ -187,14 +181,12 @@
         <skip-string type="string" name="dialpad_star_letters"/>
         <skip-string type="string" name="dialpad_star_number"/>
     </project>
-    <!-- project name="android_packages_apps_Provision" resourceID="packages/apps/Provision/res/values"/ -->
     <project name="android_packages_apps_SamsungServiceMode" resourceID="packages/apps/SamsungServiceMode/res/values"/>
     <project name="android_packages_apps_Settings" resourceID="packages/apps/Settings/res/values">
         <skip-file name="donottranslate.xml"/>
         <skip-string type="string" name="battery_stats_last_duration"/>
         <skip-string type="string" name="call_manager_summary"/>
         <skip-string type="string" name="debug_intent_sender_label"/>
-        <skip-string type="string" name="default_date_format"/>
         <skip-string type="string" name="font_size_preview_text"/>
         <skip-string type="string" name="intent_sender_data_label"/>
         <skip-string type="string" name="lockpattern_need_to_unlock_footer"/>
@@ -225,13 +217,10 @@
         <skip-string type="string-array" name="wifi_sleep_policy_values"/>
     </project>
     <project name="android_packages_apps_SetupWizard" resourceID="packages/apps/SetupWizard/res/values"/>
-    <!-- project name="android_packages_apps_SmartCardService" resourceID="packages/apps/SmartCardService/res/values"/ -->
     <project name="android_packages_apps_SoundRecorder" resourceID="packages/apps/SoundRecorder/res/values">
         <skip-string type="string" name="audio_db_title_format"/>
     </project>
-    <!-- project name="android_packages_apps_SpeechRecorder" resourceID="packages/apps/SpeechRecorder/res/values"/ -->
     <project name="android_packages_apps_Stk" resourceID="packages/apps/Stk/res/values"/>
-    <!-- project name="android_packages_apps_Tag" resourceID="packages/apps/Tag/res/values"/ -->
     <project name="android_packages_apps_Terminal" resourceID="packages/apps/Terminal/res/values"/>
     <project name="android_packages_apps_ThemeChooser" resourceID="packages/apps/ThemeChooser/res/values"/>
     <project name="android_packages_apps_Trebuchet" resourceID="packages/apps/Trebuchet/res/values">
@@ -240,21 +229,17 @@
         <skip-string type="string" name="dummy_custom_cling_error_message"/>
         <skip-string type="string" name="manage_apps_button_text"/>
     </project>
-    <!-- project name="android_packages_apps_TvSettings" resourceID="packages/apps/TvSettings/res/values"/ -->
-    <!-- project name="android_packages_apps_UnifiedEmail" resourceID="packages/apps/UnifiedEmail/res/values">
+    <project name="android_packages_apps_TvSettings" resourceID="packages/apps/TvSettings/Settings/res/values"/>
+    <project name="android_packages_apps_UnifiedEmail" resourceID="packages/apps/UnifiedEmail/res/values">
         <skip-string type="string" name="load_attachment"/>
-        <skip-string type="string" name="num_selected"/>
         <skip-string type="string" name="search_results_loaded"/>
-    </project -->
-    <!-- project name="android_packages_inputmethods_LatinIME" resourceID="packages/inputmethods/LatinIME/java/res/values">
-        <skip-file name="donottranslate.xml"/>
-        <skip-file name="donottranslate-debug-settings.xml"/>
-        <skip-file name="donottranslate-config-spacing-and-punctuations.xml"/>
-        <skip-string type="string" name="auto_correction_threshold_mode_default_index"/>
-    </project -->
-<!-- ide jön a cyngn -->
+    </project>
+
+<!-- *************** Providers *************** -->
     <project name="android_packages_providers_DownloadProvider" resourceID="packages/providers/DownloadProvider/res/values"/>
     <project name="android_packages_providers_ThemesProvider" resourceID="packages/providers/ThemesProvider/res/values"/>
+
+<!-- *************** Services *************** -->
     <project name="android_packages_services_Mms" resourceID="packages/services/Mms/res/values"/>
     <project name="android_packages_services_Telecomm" resourceID="packages/services/Telecomm/res/values">
         <skip-string type="string" name="handle_restricted"/>
@@ -273,7 +258,6 @@
         <skip-string type="string" name="enhanced_4g_lte_mode_summary"/>
         <skip-string type="string" name="enhanced_4g_lte_mode_title"/>
         <skip-string type="string-array" name="ims_vt_call_quality_entries"/>
-        <skip-string type="string" name="phone_account_settings"/>
         <skip-string type="string" name="phone_account_wifi_calling"/>
         <skip-string type="string" name="phone_accounts_accounts_header"/>
         <skip-string type="string" name="phone_accounts_add_sip_account"/>
@@ -297,24 +281,9 @@
         <skip-string type="string" name="wifi_calling_use_call_assistant"/>
         <skip-string type="string" name="wifi_calling_use_call_assistant_summary"/>
     </project>
-    <!-- project name="android_packages_screensavers_Basic" resourceID="packages/screensavers/Basic/res/values"/ -->
-    <!-- project name="android_packages_screensavers_PhotoTable" resourceID="packages/screensavers/PhotoTable/res/values"/ -->
-    <!-- project name="android_packages_wallpapers_Basic" resourceID="packages/wallpapers/Basic/res/values"/ -->
+
+<!-- *************** Wallpapers *************** -->
     <project name="android_packages_wallpapers_Galaxy4" resourceID="packages/wallpapers/Galaxy4/res/values"/>
-    <!-- project name="android_packages_wallpapers_HoloSpiral" resourceID="packages/wallpapers/HoloSpiral/res/values"/ -->
-    <!-- project name="android_packages_wallpapers_LivePicker" resourceID="packages/wallpapers/LivePicker/res/values"/ -->
-    <!-- project name="android_packages_wallpapers_MagicSmoke" resourceID="packages/wallpapers/MagicSmoke/res/values"/ -->
-    <!-- project name="android_packages_wallpapers_MusicVisualization" resourceID="packages/wallpapers/MusicVisualization/res/values"/ -->
-    <!-- project name="android_packages_wallpapers_NoiseField" resourceID="packages/wallpapers/NoiseField/res/values"/ -->
     <project name="android_packages_wallpapers_PhaseBeam" resourceID="packages/wallpapers/PhaseBeam/res/values"/>
     <project name="android_packages_wallpapers_PhotoPhase" resourceID="packages/wallpapers/PhotoPhase/res/values"/>
-<!--*******************************************************************
-***********************************************************************
-**                            Device parts                           **
-***********************************************************************
-********************************************************************-->
-    <project name="android_device_asus_tf300t" resourceID="device/asus/tf300t/AutoParts/res/values"/>
-    <project name="android_device_asus_tf700t" resourceID="device/asus/tf700t/AutoParts/res/values"/>
-    <project name="android_device_bn_acclaim" resourceID="device/bn/acclaim/TFF/res/values"/>
-    <project name="android_device_oppo_common" resourceID="device/oppo/common/configpanel/res/values"/>
 </resources>
